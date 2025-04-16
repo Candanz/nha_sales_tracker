@@ -28,6 +28,7 @@ export default {
 
         if (saleType == 0) {
             let firstResponderCertified = answers[3].c[0].t == "Yes"
+            let managerDiscount = answers[5].c[0].t == "Yes"
             let paidWithPDTab = answers[4].c[0].t == "Yes"
             message.embeds = [{
                 color: 5814783,
@@ -56,8 +57,13 @@ export default {
                         inline: false
                     },
                     {
+                        name: 'Manager Discount? (50% off)',
+                        value: managerDiscount ? "Yes":"No",
+                        inline: false
+                    },
+                    {
                         name: 'Total',
-                        value: "$ " + (firstResponderCertified?"100.000,00":"200.000,00"),
+                        value: "$ " + ((firstResponderCertified||managerDiscount)?"100.000,00":"200.000,00"),
                         inline: false
                     },
                 ]
