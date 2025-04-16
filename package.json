@@ -1,0 +1,33 @@
+{
+  "name": "nhasalestracker",
+  "version": "0.0.1",
+  "description": "NHA Sales Tracker bot for NERP",
+  "type": "module",
+  "private": true,
+  "author": "Stefan Candan",
+  "license": "MIT",
+  "main": "server.js",
+  "scripts": {
+    "start": "wrangler dev",
+    "ngrok": "ngrok http 8787",
+    "test": "c8 mocha test",
+    "fix": "eslint --fix '**/*.js'",
+    "lint": "eslint '**/*.js'",
+    "publish": "wrangler deploy"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.1.1",
+    "c8": "^9.0.0",
+    "chai": "^5.0.0",
+    "dotenv": "^16.0.3",
+    "eslint": "^9.1.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.1.3",
+    "globals": "^15.0.0",
+    "mocha": "^10.2.0",
+    "ngrok": "^5.0.0-beta.2",
+    "prettier": "^3.2.5",
+    "sinon": "^18.0.0",
+    "wrangler": "^3.0.1"
+  }
+}
